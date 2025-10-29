@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function()
 
         const items = [
             { text: 'Home', href: '#' },
-            { text: 'Services', href: 'Services-Page/Services.html' },
+            { text: 'Services', href: '../Services-Page/Services.html' },
             { text: 'Projects', href: '#projects' },
             { text: 'About', href: '#about' },
             { text: 'Contact', href: '#contact' }
