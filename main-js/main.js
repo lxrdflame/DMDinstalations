@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function()
 
         // Use image from images/INSTALLATION.png as the brand logo
         const img = document.createElement('img');
-        img.src = 'Images/INSTALLATIONS-2.png';
+        img.src = '../Images/INSTALLATIONS-2.png';
         img.alt = 'DMD INSTALLATIONS';
         img.className = 'logo';
         brand.appendChild(img);
@@ -33,11 +33,11 @@ document.addEventListener("DOMContentLoaded", function()
         ul.className = 'nav-list';
 
         const items = [
-            { text: 'Home', href: '#' },
-            { text: 'Services', href: '../Services-Page/Services.html' },
-            { text: 'Projects', href: '#projects' },
-            { text: 'About', href: '#about' },
-            { text: 'Contact', href: '#contact' }
+            { text: 'Home', href: '../index.html' },
+            { text: 'Services', href: '../../Services-Page/Services.html' },
+            { text: 'Projects', href: '../../Projects-Page/Projects.html' },
+            { text: 'About', href: '../../About-Page/About.html' },
+            { text: 'Contact', href: '../../Contact-Page/Contact.html' }
         ];
 
         items.forEach(it => {
