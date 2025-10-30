@@ -1,0 +1,14 @@
+.services-page-content{
+    padding: 100px;
+    background-color: #f9f9f9;
+    border: #ff0000 1px solid;
+    margin: 80px;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+}
+
+.service-item{
+    width: 50%;
+    border: #ff0000 1px solid;
+}
