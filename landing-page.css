@@ -7,7 +7,8 @@
     --neutral-text: #253544;
     --muted-dark: #475569;
     --muted: #6B7280;
-    --accent-warm: #FFB86B;
+    --accent-warm: #000000;
+    --color-border: rgb(0, 238, 255)
 }
 
 .content {
@@ -124,7 +125,10 @@ h2{
     max-width: 100%;
     width: 100%;
     text-align: center;
+    background-color: #86c3d4;
     padding-top: 100px;
+    padding-bottom: 100px;
+    
 }
 
 .subtitle {
@@ -281,15 +285,22 @@ h2{
     font-size: 1.2rem;
 }
 
+.information-box{
+    background-color: #1f4988;
+    padding: 10px;
+
+}
 
 .information-box p{
 
     padding: 30px;
+    box-shadow: 
+  inset 0 0 12px var(--color-border);
      background: 
-    linear-gradient(90deg, blue 4px, transparent 4px) top left,
-    linear-gradient(180deg, blue 4px, transparent 4px) top left,
-    linear-gradient(270deg, blue 4px, transparent 4px) bottom right,
-    linear-gradient(0deg, blue 4px, transparent 4px) bottom right;
+    linear-gradient(90deg, var(--color-border) 4px, transparent 4px) top left,
+    linear-gradient(180deg,var(--color-border) 4px, transparent 4px) top left,
+    linear-gradient(270deg,var(--color-border) 4px, transparent 4px) bottom right,
+    linear-gradient(0deg,  var(--color-border)4px, transparent 4px) bottom right;
   background-repeat: no-repeat;
   background-size: 20px 20px;
 

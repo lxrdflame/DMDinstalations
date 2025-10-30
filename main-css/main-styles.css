@@ -1,5 +1,5 @@
 nav {
-  background-color: rgba(202, 234, 255, 0.7);
+  background-color: #000d16dd;
   opacity: 100%;
   padding: 0 15px;
   backdrop-filter: blur(7px);
@@ -7,12 +7,11 @@ nav {
   left: 0;
   width: 100%;
   height: 80px;
-  box-shadow: 0px 2px 20px rgb(0, 170, 255);
+  box-shadow: 0px 2px 20px rgb(0, 170, 255);    
   position: fixed;
     display: flex;
     align-items: center;
     z-index: 99999;
-
 }
 
 nav ul {
@@ -22,13 +21,15 @@ nav ul {
     align-items: center;
     gap: 100px;
     padding-top: 10px;
-
+    .nav-link {
+        color: white;
+    }
 }
 
 body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #caf3ff25;
-
+    background-color: #002f4f;
+    color: white;
 }
 
 .nav-list{
@@ -48,9 +49,14 @@ body{
     position: fixed;
     margin-left: 50px;
     top: 15px;
+    /* Brighter, stronger glow + subtle blue rim */
+    filter: drop-shadow(0 0 14px rgba(255,255,255,0.95)) drop-shadow(0 0 5px rgba(255, 255, 255, 20));
 }
 
+h1 {
+    font-family: 'Microma', 'Bebas Neue', sans-serif;
 
+}
 
 .nav-link:hover {
     color: #4a90e2;
@@ -86,7 +92,7 @@ body{
     position: absolute;
     top: 100%;
     left: 0;
-      background-color: rgba(202, 234, 255, 0.7);
+    background-color: rgba(202, 234, 255, 0.7);
     width: 150px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
@@ -151,4 +157,74 @@ body{
 .dropdown-menu a:hover {
     background-color: #f5f5f5;
     color: #4a90e2;
+}
+
+/* Add this hamburger menu button style */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 100000;
+}
+
+/* Add media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: #023859;
+        width: 100%;
+        height: calc(100vh - 80px);
+        flex-direction: column;
+        gap: 20px;
+        transition: 0.3s;
+        margin-top: 0;
+        padding: 20px 0;
+    }
+
+    nav ul.active {
+        left: 0;
+    }
+
+    .nav-list {
+        position: relative;
+        left: 0;
+        transform: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    .Contact-icon {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Adjust font sizes for smaller screens */
+@media screen and (max-width: 480px) {
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .dropdown-menu a {
+        font-size: 14px;
+    }
 }
